@@ -1,0 +1,231 @@
+.hidden{
+    display:none;
+}
+
+.bodys {
+    width: 1rem;
+    height: 1rem;
+}
+
+
+
+.color{
+background-color:#F7EBDC
+#F7F2DC
+#2E282A
+#d5bdaf
+#f5ebe0
+#e3d5ca
+#d6ccc2
+}
+
+/*標題左*/
+
+.title{
+    height: 100%;
+    width: 20%;
+    position: fixed;
+    top:0;
+    left:0;
+    background-color:rgb(247, 235, 220);
+    color: rgb(110, 88, 62);
+    text-align: center;
+    display: block;
+}
+
+/*選項*/
+.titleTool{
+    border-radius: 50%;
+    height: 40%;
+    margin:0.5rem;
+}
+.titleTool_img{
+    display:inline-block;
+    position:relative;
+    overflow:hidden;
+    border-radius:15%;
+    height:70%;
+    transition: .3s linear;
+}
+.titleTool_name{
+    font-size: auto;
+    color: #2E282A;
+}
+.titleTool_ul{ 
+    text-align: center;
+    display: inline-block;
+    height: 15%;
+    width: 100%;
+    border: 0px;
+    border-color: rgb(53, 46, 37);
+    background-color: rgb(247, 235, 220);
+    color: #2E282A;
+    transition: all .3s linear;
+    font-size: 2rem;
+}
+.titleTool_ul:hover{
+    background-color: #282A3F;
+    color: #F7EBDC;
+    font-size: 2rem;
+}
+.titleTool_img:hover{
+    height:80%;
+}
+
+
+
+/*內容右*/
+.content{
+    width: auto;
+    margin-left: 20%;
+    margin-right: 2.5%;
+    margin-top: 1%;
+}
+.textbox{
+    width:20rem;
+    min-height: 100%;
+    height: max-content;
+    margin-left: 1%;
+    margin-right: 1%;
+    color: #2E282A;
+    background-color: #d5bdaf69;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.titleTool_name{
+    font-size: 2rem;
+}
+.titletext{
+    transition: .3s linear;
+    color: #2E282A;
+    margin-left: 0.5rem;
+    font-size: 2rem;
+}
+.word{
+    margin-left: 3rem;
+    margin-right: 3rem;
+    font-size: 1.5rem;
+    color: #2E282A;
+}
+.jobbox{
+    width: 100%;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+/*圖文排版*/
+.div_center{
+    text-align: center;
+    width: 100%;
+}
+.div_bk{
+    margin-right: 1rem;
+    margin-left: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.div_bkd{
+    display: inline-block;
+}
+.div_language{
+    width: 12.5%;
+}
+.div_data{
+    width: 20%;
+    padding: 5 5 0 0;
+}
+
+
+@keyframes boxZoom {
+    from {
+        width: 20rem;
+    }
+    to {
+        width: 100%;
+    }
+}
+@keyframes re_boxZoom{
+    from{
+        width:100%;
+    }
+    to {
+        width:20rem;
+    }
+}
+
+@keyframes wordZoom{
+    from{
+        opacity:0;
+    }
+    to{
+        opacity: 100;
+    }
+}
+@keyframes re_wordZoom{
+    from{
+        opacity:100;
+    }
+    to{
+        opacity: 0;
+    }
+}
+
+@keyframes opend{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+@media (max-width: 1023px) {
+    .title {
+        height: 4rem;
+        width: 100%;
+        position: fixed;
+        z-index: 10;
+        text-align: left;
+    }
+    .titleTool{
+        height: 90%;
+        padding-left: 1rem;
+    }
+    .titleTool_img{
+        display: none;
+    }
+    .titleTool_ul{ 
+        display: none;
+    }
+    .content{
+        width: auto;
+        margin-left: 0rem;
+        margin-right: 1rem;
+        margin-top: 1rem;
+        padding-top: 2rem;
+    }
+    .titletext{
+        font-size: 1.5rem;
+    }
+    .word{
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+        font-size: 1rem;
+        text-align:justify;
+    }
+    .titleTool_img:hover{
+        height:100%;
+    }
+    .textbox{
+        margin-left: 0.5rem;
+    }
+    .div_language{
+        width: 30%;
+    }
+    .div_data{
+        width: auto;
+    }
+    
+}
