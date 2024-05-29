@@ -1,230 +1,268 @@
-<html action="/test.aspx">
+<html action="/test.aspx" style="scrollbar-width: none; -ms-overflow-style: none;">
     <script src="javascript/script.js"></script>
 
     <head>    
-        <title>實習履歷</title>
+        <title>應徵履歷</title>
         <link rel="stylesheet" type="text/css" href="css/style.css">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--手機畫面-->
     </head>
 
-    <body id="my_resume_top" onload="changeMytitle()" style="opacity: 0;">
-
-        <div class="title">
-            <div class="titleTool">
-                <span class="titleTool_img" onclick="scrollToTargetTop()"><img src="image/myself.jpg" height="100%"></span>
-                <h1 class="titleTool_name" id="MyName">Er jie</h1>
-            </div>
-            <div>      
-                <button class="titleTool_ul" onclick="scrollAbout()" id="Aboutbutton">About</button>
-            </div>
-            <div>
-                <button class="titleTool_ul" onclick="scrollSkill()" id="Skillbutton">Skill</button>
-            </div>
-            <div>
-                <button class="titleTool_ul" onclick="scrollResults()" id="Resultsbutton">Results</button>
-            </div>
-            <div>
-                <button class="titleTool_ul" onclick="scrollExperience()" id="Experiencebutton">Experience</button>
+    <body style="scrollbar-width: none; -ms-overflow-style: none;">
+        <!-- loading-->
+        <div class="loading" id="loading">
+            <div class="windows8">
+                <div class="wBall" id="wBall_1">
+                    <div class="wInnerBall"></div>
+                </div>
+                <div class="wBall" id="wBall_2">
+                    <div class="wInnerBall"></div>
+                </div>
+                <div class="wBall" id="wBall_3">
+                    <div class="wInnerBall"></div>
+                </div>
+                <div class="wBall" id="wBall_4">
+                    <div class="wInnerBall"></div>
+                </div>
+                <div class="wBall" id="wBall_5">
+                    <div class="wInnerBall"></div>
+                </div>
             </div>
         </div>
-
-        <div class="content">
-            <div class="textbox" id="AboutBox" alt="關於">
-                <div id="About" class="titletext" >
-                    <h1>About</h1>   
-                    <div class="word" id="About_wordbox">
-                        <h2 style="display: inline;">王邇傑 Er-jie</h2>
-                        <h4>就讀屏東大學資訊管理系</h4>
-                        <h4>出生於2000年的千禧世代</h4>
-                        <h4>目前累積六年工讀經驗與一年正職經驗,現就職企業軟體設計實習生</h4>
-                        <h4></h4>
-                        <table style="width: 100%;">
-                            <tr>
-                                <td style="width: 100%;"><h3>Number：0966-633-973<p>Email：erjie8994@gmail.com</p></h3><img id="LOGO" src="image/NPTU_logo.png" align="right" style="width: 40%;"></td>
-                            </tr>
-                        </table>
-                        <hr>
-                        <h2>其他資料</h2>
-                        <div class="div_center"> 
-                            <div class="div_center">
-                                <h5 style="opacity: 0.6;">點擊另啟視窗檢閱</h5>
-                                <div class="div_bk">
-                                    <div class="div_bkd div_language">
-                                        <a href="data/Mypoint.pdf" target="_blank"><img src="image/pdf.png"  style="width: 100%;"></a><h4>在校成績</h4>
-                                    </div>           
-                                    <div class="div_bkd div_language">
-                                        <a href="data/Resume.pdf" target="_blank"><img src="image/pdf.png"  style="width: 100%;"></a><h4>紙本履歷</h4>
-                                    </div>           
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+        <!--loading from https://cssload.net/ -->
+        <div id="my_resume_top" onload="changeMytitle()" style="opacity: 0;">
+            <div class="title">
+                <div class="titleTool">
+                    <span class="titleTool_img" onclick="scrollToTargetTop()"><img src="image/myself.jpg" height="100%"></span>
+                    <h1 class="titleTool_name" id="MyName">Er jie</h1>
+                </div>
+                <div>      
+                    <button class="titleTool_ul" onclick="scrollAbout()" id="Aboutbutton">About</button>
+                </div>
+                <div>
+                    <button class="titleTool_ul" onclick="scrollSkill()" id="Skillbutton">Skill</button>
+                </div>
+                <div>
+                    <button class="titleTool_ul" onclick="scrollResults()" id="Resultsbutton">Results</button>
+                </div>
+                <div>
+                    <button class="titleTool_ul" onclick="scrollExperience()" id="Experiencebutton">Experience</button>
                 </div>
             </div>
-            <div class="textbox" id="SkillBox" alt="技能">
-                <div id="Skill" class="titletext">
-                    <h1>Skill</h1>
-                    <div class="word" id="Skill_wordbox">
-                        <h2>程式語言：</h2>
-                        <div class="div_center">
-                            <div class="div_bk">           
-                                <div class="div_bkd div_language"><img src="image/html-5.png" style="width: 100%;" alt="html"><h4>HTML</h4></div>           
-                                <div class="div_bkd div_language"><img src="image/JS.png" style="width: 100%;" alt="JS"><h4>JavaScript</h4></div>           
-                                <div class="div_bkd div_language"><img src="image/css-3.png" style="width: 100%;" alt="CSS"><h4>CSS</h4></div> 
-                                <div class="div_bkd div_language"><img src="image/python.png" style="width: 100%;" alt="python"><h4>Python</h4></div>           
-                                <div class="div_bkd div_language"><img src="image/Cs.png" style="width: 100%;" alt="C#"><h4>C#</h4></div>            
-                            </div>
-                        </div>
-                        <h2>其他開發應用技能：</h2>
-                        <div class="div_center">
-                            <div class="div_bkd" style="width: auto;"><img src="image/bootstrap.png" width="20%" alt="Bootstarp"><h4>Bootstrap</h4></div>
-                            <div class="div_bkd" style="width: auto;"><img src="image/sql-server (1).png" width="20%" alt="Sqlserver"><h4>MS Sqlserver</h4></div>
-                        </div>
-                        <h2>擅長使用軟體：</h2>
-                        <div class="div_center">
-                            <div class="div_bkd" style="width: auto;"><img src="image/vscode.png" width="20%" alt="VScode"><h4>VScode</h4></div>
-                            <div class="div_bkd" style="width: auto;"><img src="image/visual-studio.png" width="20%" alt="visual-studio"><h4>Visual Studio</h4></div>
-                        </div>
-                        <h2>曾學習開發過：</h2>
-                        <div class="div_center">
-                            <div class="div_bkd" style="width: auto;"><img src="image/django.png" width="20%" alt="Django"><h4>Django</h4></div>
-                            <div class="div_bkd" style="width: auto;"><img src="image/windows.png" width="20%" alt="Windows"><h4>Winform</h4></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="textbox" id="ResultsBox" alt="作品">
-                <div id="Results" class="titletext">
-                    <h1>Results</h1>
-                    <div class="word" id="Results_wordbox">
-                        <h2>位於C槽的海生館</h2>
-                        <div Class="div_center">
-                            <h3>開發目標</h3>
-                            <img src="image/windows.png" style="width: 15%;" alt="Winform">
-                            <h4>負責內容：視窗UI、導覽畫面、魟魚區</h4>
-                        </div>
-                        <div class="div_center">
-                            <div class="div_bk">
-                                <h3>使用語法與軟體</h3>                   
-                                <img src="image/Cs.png" style="width: 15%;" alt="C#">
-                                <img src="image/sql-server (1).png" style="width: 15%;" alt="sql">
-                                <img src="image/visual-studio.png" style="width: 15%;" alt="visual-studio">
-                            </div>
-                        </div>
-                        <hr>
-                        <div class="div_center"> 
-                            <h3>實際畫面</h3>
-                            <div class="div_bk div_bkd">
-                                <img src="image/results/winform3-1.png" style="width: 100%;">
-                                <h4>程式的首個Form視窗</h4>
-                            </div>
-                            <div class="div_bk div_bkd">
-                                <img src="image/results/winform3-2.png" style="width: 100%;">
-                                <h4>逐字判定like %textbox%的搜尋功能</h4>
-                            </div>
-                            <div class="div_bk div_bkd">
-                                <img src="image/results/winform3-3.png" style="width: 100%;">
-                                <h4>滑鼠操作獲取格的位址，得到ID後刪除</h4>
-                            </div>
-                            <div class="div_bk div_bkd">
-                                <img src="image/results/winform3-4.png" style="width: 100%;">
-                                <h4>選取後顯示資料，接續後續修改</h4>
-                            </div>
-                        </div>
-                        <hr>
-                        <h2>展覽介紹網(專題展)</h2>
-                        <div Class="div_center">
-                            <h3>開發目標</h3>
-                            <img src="image/django.png" style="width: 15%;" alt="Django">
-                            <h4>負責內容：部分網頁設計、資料庫管理、數據圖形化、地圖最短路徑</h4>
-                        </div>
-                        <div class="div_center">
-                            <div class="div_bk div_bkd">
-                                <h3>使用語法與軟體</h3>                
-                                <img src="image/python.png" style="width: 15%;" alt="python">
-                                <img src="image/vscode.png" style="width: 15%;" alt="vscode">
-                                <img src="image/bootstrap.png" style="width: 15%;" alt="Bootstrap">
-                                <img src="image/html-5.png" style="width: 15%;" alt="html">
-                                <img src="image/JS.png" style="width: 15%;" alt="JS">
-                                <img src="image/css-3.png" style="width: 15%;" alt="CSS">
-                            </div>
-                        </div>
-                        <hr>
-                        <div class="div_center"> 
-                            <h3>實際畫面</h3>
-                            <div class="div_bk div_bkd">
-                                <img src="image/results/Django-1.png" style="width: 70%;" alt="1">
-                                <h4>使用DFS(深度優先搜索)算法計算路徑，設定條件篩選路徑前往目的地</h4>
-                            </div>
-                            <div class="div_bk div_bkd">
-                                <img src="image/results/Django-2.png" style="width: 70%;" alt="2">
-                                <h4>攤位人氣統計</h4>
-                            </div>
-                            <div class="div_bk div_bkd">
-                                <img src="image/results/Django-3.png" style="width: 70%;" alt="3">
-                                <h4>關鍵字搜尋統計</h4>
-                            </div>
-                            <div class="div_bk div_bkd">
-                                <img src="image/results/Django-4.png" style="width: 70%;" alt="4">
-                                <h4>依小時單位區分攤位的人數紀錄</h4>
-                            </div>
-                            <div class="div_bk div_bkd">
-                                <img src="image/results/Django-5.png" style="width: 70%;" alt="5">
-                                <h4>人氣紀錄與回傳資料庫</h4>
-                            </div>
-                            <div class="div_bk div_bkd">
-                                <img src="image/results/Django-6.png" style="width: 70%;" alt="6">
-                                <h4>偵測範圍與畫面，若判定人數增加便回傳資料</h4>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="textbox" id="ExperienceBox" alt="經歷">
-                <div class="titletext" id="Experience">
-                    <h1>Experience</h1>
-                    <div class="word" id="Experience_wordbox">
-                        <h2>個人簡介：</h2>
+    
+            <div class="content">
+                <div class="textbox" id="AboutBox" alt="關於">
+                    <div id="About" class="titletext" >
+                        <h1>About</h1>   
                         <div class="word" id="About_wordbox">
-                            <h4>我出生於單親家庭，為了減輕家中負擔，從十六歲起便開始打工貼補家用。</h4>
-                            <h4>早期的餐飲打工培養了我察言觀色的能力，也讓我相應同齡層的人提早瞭解"辛苦錢"的意思。<p>同時，因長期在職場上與其他哥哥姊姊、年長者相處，也培養出一定的交際能力。</p></h4>
-                            <h4>行政的職務使我更加的細心，開始懂得規劃時間與作業流程、善用便條紙紀錄事項。</h4>
+                            <h2 style="display: inline;">王邇傑 Er-jie</h2>
+                            <h4>屏東大學資訊管理系2024年應屆畢業生</h4>
+                            <h4>累積八年以上工讀經驗與一年正職經驗，現職位RD intern</h4>
+                            <h4>目前以尋找兵役前的短期工作與兵役後的穩定工作為目標</h4>
+                            <table style="width: 100%;">
+                                <tr>
+                                    <td style="width: 100%;"><h3>Phone：0966-633-973<p>Email：erjie8994@gmail.com</p></h3><img id="LOGO" src="image/NPTU_logo.png" align="right" style="width: 40%;"></td>
+                                </tr>
+                            </table>
                             <hr>
-                            <h3>工作經歷：</h3>
-                            <div class="div_center">
-                                <div class="div_bk div_bkd">
-                                    <img src="image/job_waiter.png" height="150rem">
-                                    <h4>Small萱餐廳外場工讀生 2015~2016/10 </h4>
-                                    <h4>義郎日式料理外場服務員 2018/7~2019/1</h4>
-                                    <h4>冠味賞鴨肉飯工讀生 2020/01~2020/08 </h4>
-                                </div>
-                                <div class="div_bk div_bkd" >
-                                    <img src="image/job_ground_man_staff_travel.png" height="150rem">
-                                    <h4>中鴻金屬公司生管助理 2019/3~2019/9 </h4>
-                                    <h4>志光教育公司屏儒部行政工讀 2020/09~2023/12</h4>
-                                    <h4>樂方股份有限公司程式設計實習生2023/12~至今</h4>
-                                    <h4 style="opacity: 0;">just for set</h4>
-                                </div>
-                            </div>
-                            <hr>
-                            <h2>學生時期經常參加演講、擔任報告者</h2>
+                            <h2>其他資料</h2>
                             <div class="div_center"> 
-                                <img id="speaker" src="image/myself2.png" style="border-radius:15%;">
-                                <h4>參加競賽時的採訪</h4>
+                                <div class="div_center">
+                                    <h5 style="opacity: 0.6;">點擊另啟視窗檢閱</h5>
+                                    <div class="div_bk">
+          
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="textbox" id="SkillBox" alt="技能">
+                    <div id="Skill" class="titletext">
+                        <h1>Skill</h1>
+                        <div class="word" id="Skill_wordbox">
+                            <h2>程式語言：</h2>
+                            <div class="div_center">
+                                <div class="div_bk">           
+                                    <div class="div_bkd div_language"><img src="image/html-5.png" style="width: 100%;" alt="html"><h4>HTML</h4></div>           
+                                    <div class="div_bkd div_language"><img src="image/JS.png" style="width: 100%;" alt="JS"><h4>JavaScript</h4></div>           
+                                    <div class="div_bkd div_language"><img src="image/css-3.png" style="width: 100%;" alt="CSS"><h4>CSS</h4></div> 
+                                    <div class="div_bkd div_language"><img src="image/python.png" style="width: 100%;" alt="python"><h4>Python</h4></div>           
+                                    <div class="div_bkd div_language"><img src="image/Cs.png" style="width: 100%;" alt="C#"><h4>C#</h4></div>            
+                                </div>
+                            </div>
+                            <h2>其他開發應用技能：</h2>
+                            <div class="div_center">
+                                <div class="div_bkd" ><img src="image/bootstrap.png" width="75%" alt="Bootstarp"><h4>Bootstrap</h4></div>
+                                <div class="div_bkd" ><img src="image/sql-server (1).png" width="75%" alt="Sqlserver"><h4>MS Sqlserver</h4></div>
+                            </div>
+                            <h2>擅長使用軟體：</h2>
+                            <div class="div_center">
+                                <div class="div_bkd" ><img src="image/vscode.png" width="75%" alt="VScode"><h4>VScode</h4></div>
+                                <div class="div_bkd" ><img src="image/visual-studio.png" width="75%" alt="visual-studio"><h4>Visual Studio</h4></div>
+                            </div>
+                            <h2>曾學習開發過：</h2>
+                            <div class="div_center">
+                                <div class="div_bkd" ><img src="image/django.png" width="75%" alt="Django"><h4>Django</h4></div>
+                                <div class="div_bkd" ><img src="image/windows.png" width="75%" alt="Windows"><h4>Winform</h4></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="textbox" id="ResultsBox" alt="作品">
+                    <div id="Results" class="titletext">
+                        <h1>Results</h1>
+                        <div class="word" id="Results_wordbox">
+                            <h2>位於C槽的海生館</h2>
+                            <div Class="div_center">
+                                <h3>開發目標</h3>
+                                <img src="image/windows.png" style="width: 15%;" alt="Winform">
+                                <h4>負責內容：視窗UI、導覽畫面、魟魚區</h4>
+                            </div>
+                            <div class="div_center">
+                                <div class="div_bk">
+                                    <h3>使用語法與軟體</h3>                   
+                                    <img src="image/Cs.png" style="width: 15%;" alt="C#">
+                                    <img src="image/sql-server (1).png" style="width: 15%;" alt="sql">
+                                    <img src="image/visual-studio.png" style="width: 15%;" alt="visual-studio">
+                                </div>
                             </div>
                             <hr>
+                            <div class="div_center"> 
+                                <h3>實際畫面</h3>
+                                <div class="div_bk ">
+                                    <img src="image/results/winform3-1.png" style="width: 70%;">
+                                    <h4>程式的首個Form視窗</h4>
+                                </div>
+                                <div class="div_bk ">
+                                    <img src="image/results/winform3-2.png" style="width: 70%;">
+                                    <h4>逐字判定like %textbox%的搜尋功能</h4>
+                                </div>
+                                <div class="div_bk ">
+                                    <img src="image/results/winform3-3.png" style="width: 70%;">
+                                    <h4>滑鼠操作獲取格的位址，得到ID後刪除</h4>
+                                </div>
+                                <div class="div_bk ">
+                                    <img src="image/results/winform3-4.png" style="width: 70%;">
+                                    <h4>選取後顯示資料，接續後續修改</h4>
+                                </div>
+                            </div>
+                            <hr>
+                            <h2>展覽介紹網(專題展)</h2>
+                            <div Class="div_center">
+                                <h3>開發目標</h3>
+                                <img src="image/django.png" style="width: 15%;" alt="Django">
+                                <h4>負責內容：部分網頁設計、資料庫管理、數據圖形化、地圖最短路徑</h4>
+                            </div>
+                            <div class="div_center">
+                                <div class="div_bk div_bk">
+                                    <h3>使用語法與軟體</h3>                
+                                    <img src="image/python.png" style="width: 15%;" alt="python">
+                                    <img src="image/vscode.png" style="width: 15%;" alt="vscode">
+                                    <img src="image/bootstrap.png" style="width: 15%;" alt="Bootstrap">
+                                    <img src="image/html-5.png" style="width: 15%;" alt="html">
+                                    <img src="image/JS.png" style="width: 15%;" alt="JS">
+                                    <img src="image/css-3.png" style="width: 15%;" alt="CSS">
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="div_center"> 
+                                <h3>實際畫面</h3>
+                                <div class="div_bk">
+                                    <img src="image/results/Django-1.png" style="width: 70%;" alt="1">
+                                    <h4>使用DFS(深度優先搜索)算法計算路徑，設定條件篩選路徑前往目的地</h4>
+                                </div>
+                                <div class="div_bk">
+                                    <img src="image/results/Django-2.png" style="width: 70%;" alt="2">
+                                    <h4>攤位人氣統計</h4>
+                                </div>
+                                <div class="div_bk">
+                                    <img src="image/results/Django-3.png" style="width: 70%;" alt="3">
+                                    <h4>關鍵字搜尋統計</h4>
+                                </div>
+                                <div class="div_bk">
+                                    <img src="image/results/Django-4.png" style="width: 70%;" alt="4">
+                                    <h4>依小時單位區分攤位的人數紀錄</h4>
+                                </div>
+                                <div class="div_bk">
+                                    <img src="image/results/Django-5.png" style="width: 70%;" alt="5">
+                                    <h4>人氣紀錄與回傳資料庫</h4>
+                                </div>
+                                <div class="div_bk">
+                                    <img src="image/results/Django-6.png" style="width: 70%;" alt="6">
+                                    <h4>偵測範圍與畫面，若判定人數增加便回傳資料</h4>
+                                </div>
+                            </div>
                         </div>
-
-                        <h2>參與競賽</h2>
-                        <div class="div_center"> 
-                            <h5 style="opacity: 0.6;">點擊可開啟大圖</h5>
-                            <div class="div_bk div_bkd">
-                                <a href="image/contest/contest1.png" target="_blank"><img src="image/contest/contest1.png" style="height:200px;"></a>
-                                <a href="image/contest/contest2.png" target="_blank"><img src="image/contest/contest2.png" style="height: 200px;"></a>
-                                <a href="image/contest/contest3.png" target="_blank"><img src="image/contest/contest3.png" style="height: 200px;"></a>
-                                <a href="image/contest/contest4.png" target="_blank"><img src="image/contest/contest4.png" style="height: 200px;"></a>
-                                <a href="image/contest/contest5.png" target="_blank"><img src="image/contest/contest5.png" style="height: 200px;"></a>
+                    </div>
+                </div>
+                <div class="textbox" id="ExperienceBox" alt="經歷">
+                    <div class="titletext" id="Experience">
+                        <h1>Experience</h1>
+                        <div class="word" id="Experience_wordbox">
+                            <h2>個人簡介：</h2>
+                            <div class="word" id="About_wordbox">
+                                <h4>我出生於單親家庭，為了減輕家中負擔，從國三起便開始打工貼補家用。</h4>
+                                <div class="word">
+                                    <h5>在這幾年工作的過程中，培養了一定的察言觀色、與長輩的交際能力。
+                                        <p>同時也善於應對兒童，經常被職場同事依賴在旁協助引導小孩。</p>
+                                    </h5>
+                                </div>
+                                <h4>因為現實條件的影響，使得我想投入於資訊教育的領域。</h4>
+                                <div class="word">
+                                    <h5>從國中開始被挖掘出電腦應用的天分後，便一路以技職的方式升學至今。
+                                        <p>在接受許多師長的關心與培育下成長至今，
+                                        因此想要投身於資訊教育的領域之中，就像當初發現我的師長們一樣。</p>
+                                    </h5>
+                                </div>
+                                <hr>
+                                <h3>學業經歷：</h3>
+                                <div class="word">
+                                    <h5><p>高雄市立海青工商-資料處理科(技藝升學)</p></h5>
+                                    <h5><p>屏東市立屏東大學-資訊管理學系(技優保送)</p></h5>
+                                </div>
+                                <hr>
+                                <h3>工作經歷：</h3>
+                                <div class="word">
+                                    <div class="div_bk" style="display: inline-block;">
+                                        <img src="image/job_waiter.png" height="150px">
+                                    </div>
+                                    <div class="div_bk" style="display: inline-block;">
+                                        <h4>Small萱餐廳外場工讀生 2015~2016/10 </h4>
+                                        <h4>義郎日式料理外場服務員 2018/7~2019/1</h4>
+                                        <h4>冠味賞鴨肉飯工讀生 2020/01~2020/08 </h4>
+                                    </div>
+                                </div>
+                                <div class="word">
+                                    <div class="div_bk" style="display: inline-block;">
+                                        <img src="image/job_ground_man_staff_travel.png" height="150px">                                        
+                                    </div>
+                                    <div class="div_bk" style="display: inline-block;">
+                                        <h4>中鴻金屬公司生管助理 2019/3~2019/9 </h4>
+                                        <h4>志光教育公司屏儒部行政工讀 2020/09~2023/12</h4>
+                                        <h4>樂方股份有限公司程式設計實習生2023/12~2024/6</h4>
+                                    </div>
+                                </div>
+                                <hr>
+                            </div>
+                            <h2>證照資訊</h2>
+                            <div class="word div_bk">
+                                <ul>
+                                    <li><h5>軟體應用乙級</h5></li>
+                                    <li><h5>網頁設計丙級</h5></li>
+                                    <li><h5>TQC中英打專業級、python3、Word實用級</h5></li>
+                                </ul>
+                            </div>
+                            <h2>參與競賽</h2>
+                            <div class="div_center"> 
+                                <h5 style="opacity: 0.6;">點擊可開啟大圖</h5>
+                                <div class="div_bk">
+                                    <a href="image/contest/contest1.png" target="_blank"><img src="image/contest/contest1.png" style="height:200px;"></a>
+                                    <a href="image/contest/contest2.png" target="_blank"><img src="image/contest/contest2.png" style="height: 200px;"></a>
+                                    <a href="image/contest/contest3.png" target="_blank"><img src="image/contest/contest3.png" style="height: 200px;"></a>
+                                    <a href="image/contest/contest4.png" target="_blank"><img src="image/contest/contest4.png" style="height: 200px;"></a>
+                                    <a href="image/contest/contest5.png" target="_blank"><img src="image/contest/contest5.png" style="height: 200px;"></a>
+                                </div>
                             </div>
                         </div>
                     </div>

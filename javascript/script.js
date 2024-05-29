@@ -20,6 +20,10 @@ function changeMytitle() {
         img.style.width='25%';
     }
 }
+
+function simulateLoadDelay() {
+    return new Promise(resolve => setTimeout(resolve, 10000)); // 延迟3秒
+}
 /*按鈕*/
 /*
 function scrollToTargetTop() {
@@ -27,8 +31,11 @@ function scrollToTargetTop() {
     target.scrollIntoView({ behavior: 'smooth' }); 平滑滾動*/
 
 /*載入結束後*/ 
-document.addEventListener('DOMContentLoaded',function(){
+document.addEventListener('DOMContentLoaded',async function(){
+    const load = document.getElementById('loading')
     const mewin = document.getElementById('my_resume_top');
+    // await simulateLoadDelay();
+    load.style.display = 'none';
     mewin.style.animation = 'opend 1.5s forwards';
     mewin.scrollIntoView({ behavior: 'smooth' });
 })
