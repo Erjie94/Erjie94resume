@@ -34,7 +34,6 @@ function scrollToTargetTop() {
 document.addEventListener('DOMContentLoaded',async function(){
     const load = document.getElementById('loading')
     const mewin = document.getElementById('my_resume_top');
-    await simulateLoadDelay(1);
     load.style.display = 'none';
     mewin.style.animation = 'opend 1.5s forwards';
     mewin.scrollIntoView({ behavior: 'smooth' });
